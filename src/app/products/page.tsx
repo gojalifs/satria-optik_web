@@ -17,18 +17,13 @@ const options = [
 export default function Products() {
   const [selectedValue, setSelectedValue] = React.useState<string>('all'); // Initial selected value (type specified)
 
-  const [windowSize, setWindowSize] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
-  });
-
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedValue(event.target.value);
   };
 
   return (
     <main className='my-8 mx-2'>
-      <div className='text-2xl my-2'>{windowSize.width} Best seller kami</div>
+      <div className='text-2xl my-2'>Best seller kami</div>
 
       <div className='mb-4'>
         <Dropdown
